@@ -1,0 +1,10 @@
+
+#Confuguracion del servidor del microservicio
+server:
+  port: 8083
+
+#Configuracion de datos de conexion de Base de Datos Mongo (Docker)
+spring:
+ data: 
+    mongodb: 
+      uri: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@localhost:27017/microsNotificaciones
