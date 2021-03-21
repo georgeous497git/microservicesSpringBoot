@@ -29,3 +29,15 @@ resilience4j.circuitbreaker:
         edificio:
             baseConfig: default
             waitDurationInOpenState: 5000
+
+resilience4j.retry:
+  instances:
+    edificio:
+      # The maximum number of retry attempt
+      maxRetryAttempts: 3
+      # Initial interval between retry attempts
+      waitDuration: 1s
+      # Use exponential backoff strategy
+      enableExponentialBackoff: true
+      # Multiplier for the exponential backoff
+      exponentialBackoffMultiplier: 2
