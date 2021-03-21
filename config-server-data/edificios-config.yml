@@ -41,3 +41,4 @@ resilience4j.retry:
       enableExponentialBackoff: true
       # Multiplier for the exponential backoff
       exponentialBackoffMultiplier: 2
+
