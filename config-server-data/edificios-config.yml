@@ -26,13 +26,13 @@ resilience4j.circuitbreaker:
             slidingWindowSize: 50
             permittedNumberOfCallsInHalfOpenState: 10
     instances:
-        edificio:
+        edificioService:
             baseConfig: default
             waitDurationInOpenState: 5000
 
 resilience4j.retry:
   instances:
-    edificio:
+    edificioService:
       # The maximum number of retry attempt
       maxRetryAttempts: 3
       # Initial interval between retry attempts
