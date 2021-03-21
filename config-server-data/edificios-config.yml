@@ -14,31 +14,31 @@ eureka:
    defaultZone: http://localhost:8099/eureka/
 
 resilience4j.circuitbreaker:
-    configs:
-        default:
-            slidingWindowSize: 100
-            permittedNumberOfCallsInHalfOpenState: 10
-            waitDurationInOpenState: 10000
-            failureRateThreshold: 60
-            eventConsumerBufferSize: 10
-            registerHealthIndicator: true
-        someShared:
-            slidingWindowSize: 50
-            permittedNumberOfCallsInHalfOpenState: 10
-    instances:
-        edificioService:
-            baseConfig: default
-            waitDurationInOpenState: 5000
+ configs:
+  default:
+   slidingWindowSize: 100
+   permittedNumberOfCallsInHalfOpenState: 10
+   waitDurationInOpenState: 10000
+   failureRateThreshold: 60
+   eventConsumerBufferSize: 10
+   registerHealthIndicator: true
+  someShared:
+   slidingWindowSize: 50
+   permittedNumberOfCallsInHalfOpenState: 10
+  instances:
+   edificioService:
+   baseConfig: default
+   waitDurationInOpenState: 5000
 
 resilience4j.retry:
-  instances:
-    edificioService:
-      # The maximum number of retry attempt
-      maxRetryAttempts: 3
-      # Initial interval between retry attempts
-      waitDuration: 1s
-      # Use exponential backoff strategy
-      enableExponentialBackoff: true
-      # Multiplier for the exponential backoff
-      exponentialBackoffMultiplier: 2
+ instances:
+  edificioService:
+   # The maximum number of retry attempt
+   maxRetryAttempts: 3
+   # Initial interval between retry attempts
+   waitDuration: 1s
+   # Use exponential backoff strategy
+   enableExponentialBackoff: true
+   # Multiplier for the exponential backoff
+   exponentialBackoffMultiplier: 2
 
