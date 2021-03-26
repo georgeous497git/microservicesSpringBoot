@@ -7,6 +7,8 @@ spring:
  data:
     mongodb:
       uri: mongodb://${MONGO_INITDB_ROOT_USERNAME}:${MONGO_INITDB_ROOT_PASSWORD}@localhost:27011/microsEdificios
+ application:
+  name: edificios-service
 
 eureka:
  client:
