@@ -16,6 +16,8 @@ eureka:
    defaultZone: http://localhost:8099/eureka/
   fetchRegistry: true
   registerWithEureka: true
+ instance:
+  hostname: localhost
 
 resilience4j.circuitbreaker:
  configs:

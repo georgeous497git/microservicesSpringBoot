@@ -16,3 +16,5 @@ eureka:
    defaultZone: http://localhost:8099/eureka/
   registerWithEureka: true
   fetchRegistry: true
+ instance:
+  hostname: localhost
