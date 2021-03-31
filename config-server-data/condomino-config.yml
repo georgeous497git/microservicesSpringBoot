@@ -32,6 +32,6 @@ resilience4j.circuitbreaker:
    slidingWindowSize: 50
    permittedNumberOfCallsInHalfOpenState: 10
   instances:
-   edificioService:
-   baseConfig: default
-   waitDurationInOpenState: 5000
+   edificios-service:
+    baseConfig: default
+    waitDurationInOpenState: 5000
