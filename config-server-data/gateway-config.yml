@@ -1,0 +1,23 @@
+server:
+ port: 8091
+
+eureka:
+ client:
+  serviceUrl:
+   defaultZone: http://localhost:8099/eureka/
+
+spring:
+ cloud:
+  gateway:
+   discovery:
+    locator:
+     enable: true
+   routes:
+    - id: condomino-service
+      uri: lb://condomino-service
+      predicates: 
+       - Path=/condomino/**
+    - id: edificios-service
+      uri: lb://edificios-service
+      predicates:
+       - Path=/edificio/** 
