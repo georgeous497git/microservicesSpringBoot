@@ -19,6 +19,15 @@ eureka:
  instance:
   hostname: localhost
 
+management:
+ endpoints:
+  web:
+   exposure:
+    include: "*"
+  health:
+    showDetails: "always"
+
+
 resilience4j.circuitbreaker:
  configs:
   default:
