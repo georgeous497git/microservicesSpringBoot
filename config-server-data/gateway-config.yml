@@ -5,6 +5,10 @@ eureka:
  client:
   serviceUrl:
    defaultZone: http://localhost:8099/eureka/
+  fetchRegistry: true
+  registerWithEureka: true
+ instance: 
+  hostname: localhost
 
 spring:
  cloud:
@@ -21,3 +25,5 @@ spring:
       uri: lb://edificios-service
       predicates:
        - Path=/edificio/** 
+ application:
+  name: gateway-service
